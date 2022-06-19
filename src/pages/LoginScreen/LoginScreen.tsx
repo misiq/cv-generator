@@ -1,9 +1,13 @@
 import Header from "../../components/header/Header";
+import LoginForm from "./components/LoginForm";
 
 const LoginScreen = () => {
-    return(
-        <Header/>
-    )
-}
+  return (
+    <>
+      <Header />
+      <LoginForm />
+    </>
+  );
+};
 
 export default LoginScreen;
