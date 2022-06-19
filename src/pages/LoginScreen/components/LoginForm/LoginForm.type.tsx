@@ -1,6 +1,6 @@
-type InitialValuesState = {
+type ValidateFunctionArguments = {
   email: string;
   password: string;
 };
 
-export default InitialValuesState;
+export default ValidateFunctionArguments;
