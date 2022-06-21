@@ -1,6 +1,15 @@
 import ValidateFunctionArguments from "./LoginForm.type";
 import { FC } from "react";
 import { useFormik } from "formik";
+import {
+  StyledFormWrapper,
+  StyledForm,
+  StyledLabel,
+  StyledInput,
+  StyledErrorWrapper,
+  StyledError,
+  StyledButton,
+} from "./LoginForm.styled";
 
 const validate = (values: ValidateFunctionArguments) => {
   const errors = {
@@ -32,27 +41,38 @@ const LoginForm: FC = () => {
       console.log(values);
     },
   });
-  console.log(formik.values.password);
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="email">Email</label>
-      <input
-        type="email"
-        name="email"
-        onChange={formik.handleChange}
-        value={formik.values.email}
-      />
-      {formik.errors.email && <span>{formik.errors.email}</span>}
-      <label htmlFor="password">Password</label>
-      <input
-        type="password"
-        name="password"
-        onChange={formik.handleChange}
-        value={formik.values.password}
-      />
-      {formik.errors.password && <span>{formik.errors.password}</span>}
-      <button type="submit">Sign In</button>
-    </form>
+    <StyledFormWrapper>
+      <StyledForm onSubmit={formik.handleSubmit}>
+        <StyledLabel htmlFor="email">Email</StyledLabel>
+        <StyledInput
+          type="email"
+          name="email"
+          onChange={formik.handleChange}
+          value={formik.values.email}
+          placeholder="Enter your email"
+        />
+        {formik.errors.email && (
+          <StyledErrorWrapper>
+            <StyledError>{formik.errors.email}</StyledError>
+          </StyledErrorWrapper>
+        )}
+        <StyledLabel htmlFor="password">Password</StyledLabel>
+        <StyledInput
+          type="password"
+          name="password"
+          onChange={formik.handleChange}
+          value={formik.values.password}
+          placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
+        />
+        {formik.errors.password && (
+          <StyledErrorWrapper>
+            <StyledError>{formik.errors.password}</StyledError>
+          </StyledErrorWrapper>
+        )}
+        <StyledButton type="submit">Sign in</StyledButton>
+      </StyledForm>
+    </StyledFormWrapper>
   );
 };
 
