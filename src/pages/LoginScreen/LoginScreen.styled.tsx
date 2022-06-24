@@ -4,7 +4,7 @@ const StyledPageWrapper = styled.div`
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-evenly;
-  height: 100vh;
+  min-height: 100vh;
 
   @media screen and (min-width: 576px) {
     flex-direction: row;
@@ -29,7 +29,7 @@ const StyledLeftSideWrapper = styled.div`
 
 const StyledRightSideWrapper = styled.div`
   width: 100vw;
-  background-color: #f2f2f2;
+  background-color: ${(props) => props.theme.lightGreyBackground};
   display: flex;
   justify-content: center;
   align-items: center;

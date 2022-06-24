@@ -3,7 +3,7 @@ import {
   StyledHeading,
   StyledH1,
   StyledText,
-} from "./Header.styled";
+} from "./LoginScreenHeader.styled";
 
 const Header = () => {
   return (

@@ -22,15 +22,15 @@ const StyledLabel = styled.label`
   text-align: left;
   font-weight: 600;
   padding: 15px 0 5px 0;
-  color: #333;
+  color: ${(props) => props.theme.textMainColor};
 `;
 
 const StyledInput = styled.input`
   all: unset;
-  border: 1px solid #dbdbdb;
+  border: 1px solid ${(props) => props.theme.lightGreyBorder};
   border-radius: 7px;
   padding: 10px 15px;
-  color: #333;
+  color: ${(props) => props.theme.textMainColor};
 `;
 
 const StyledErrorWrapper = styled.div`
@@ -39,19 +39,19 @@ const StyledErrorWrapper = styled.div`
 `;
 
 const StyledError = styled.span`
-  color: #fff;
-  background-color: #df4b4b;
+  color: ${(props) => props.theme.errorTextColor};
+  background-color: ${(props) => props.theme.errorBackgroundColor};
   padding: 5px;
   margin-top: 5px;
 `;
 
 const StyledButton = styled.button`
   margin-top: 15px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid ${(props) => props.theme.buttonBackgroundColor};
   border-radius: 7px;
   padding: 10px 15px;
-  color: #fff;
-  background-color: blueviolet;
+  color: ${(props) => props.theme.buttonTextColor};
+  background-color: ${(props) => props.theme.buttonBackgroundColor};
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;
