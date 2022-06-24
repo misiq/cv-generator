@@ -43,6 +43,17 @@ const StyledError = styled.span`
   background-color: #df4b4b;
   padding: 5px;
   margin-top: 5px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    background-color: ${(props) => props.theme.errorBackgroundColor};
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+  }
 `;
 
 const StyledButton = styled.button`

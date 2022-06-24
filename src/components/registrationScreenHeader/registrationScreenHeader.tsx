@@ -3,9 +3,9 @@ import {
   StyledHeading,
   StyledH1,
   StyledText,
-} from "./Header.styled";
+} from "../header/Header.styled";
 
-const HeaderRegister = () => {
+const RegistrationScreenHeader = () => {
   return (
     <StyledHeadingWrapper>
       <StyledHeading>
@@ -16,4 +16,4 @@ const HeaderRegister = () => {
   );
 };
 
-export default HeaderRegister;
+export default RegistrationScreenHeader;

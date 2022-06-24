@@ -6,6 +6,7 @@ import {
   StyledLeftSideWrapper,
   StyledRightSideWrapper,
 } from "./LoginScreen.styled";
+import { theme } from "../../globalStyles/GlobalStyles";
 
 const LoginScreen = () => {
   return (

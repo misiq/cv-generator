@@ -1,4 +1,4 @@
-import HeaderRegister from "../../components/header/HeaderRegister";
+import RegistrationScreenHeader from "../../components/registrationScreenHeader/registrationScreenHeader";
 import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import {
   StyledPageWrapper,
@@ -6,12 +6,14 @@ import {
   StyledRightSideWrapper,
 } from "../LoginScreen/LoginScreen.styled";
 import LogoImage from "../LoginScreen/LoginScreenLogo/logo.png";
+import { ThemeProvider } from "styled-components";
+import { theme } from "../../globalStyles/GlobalStyles";
 
 const RegistrationScreen = () => {
   return (
     <StyledPageWrapper>
       <StyledLeftSideWrapper>
-        <HeaderRegister />
+        <RegistrationScreenHeader />
         <RegistrationForm />
       </StyledLeftSideWrapper>
       <StyledRightSideWrapper>

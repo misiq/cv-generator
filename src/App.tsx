@@ -1,7 +1,7 @@
 import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import GlobalStyle from "./globalStyles/GlobalStyles";
+import { GlobalStyle } from "./globalStyles/GlobalStyles";
 
 function App() {
   const [count, setCount] = useState(0);
